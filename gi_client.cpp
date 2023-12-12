@@ -13,43 +13,58 @@ public:
     GaussianInteger(int r, int i) : real(r), imag(i) {}
 
     // Getter methods
-    int getReal() const { return real; }
-    int getImag() const { return imag; }
+    int getReal() const { 
+        
+        return this->real; 
+    }
+
+
+    int getImag() const { 
+        
+        return this->imag; 
+    }
 
     // Setter methods
-    void setReal(int r) { real = r; }
-    void setImag(int i) { imag = i; }
+    void setReal(int r) {
+         this->real = r; 
+         
+    }
+    void setImag(int i) { 
+        
+        this->imag = i; 
+        
+    }
 
     // Display method
     void display() const {
-        cout << real << " + " << imag << "i" << std::endl;
+        cout << this->real << " + " << this->imag << "i" << endl;
     }
 
     // Addition method
     GaussianInteger add(const GaussianInteger& other) const {
-        return GaussianInteger(real + other.real, imag + other.imag);
+        return GaussianInteger(this->real + other.real, this->imag + other.imag);
     }
 
     // Subtraction method
     GaussianInteger subtract(const GaussianInteger& other) const {
-        return GaussianInteger(real - other.real, imag - other.imag);
+        return GaussianInteger(this->real - other.real, this->imag - other.imag);
     }
 
     // Conjugate method
     GaussianInteger conjugate() const {
-        return GaussianInteger(real, -imag);
+        return GaussianInteger(this->real, -this->imag);
     }
 
     // Multiplication method
     GaussianInteger multiply(const GaussianInteger& other) const {
-        int resultReal = (real * other.real) - (imag * other.imag);
-        int resultImag = (real * other.imag) + (imag * other.real);
+        int resultReal = (this->real * other.real) - (this->imag * other.imag);
+        int resultImag = (this->real * other.imag) + (this->imag * other.real);
         return GaussianInteger(resultReal, resultImag);
     }
 
     // Scalar multiplication method
     GaussianInteger scalarMultiply(int scalar) const {
-        return GaussianInteger(real * scalar, imag * scalar);
+        return GaussianInteger(this->real * scalar, this->imag * scalar);
     }
 };
 
