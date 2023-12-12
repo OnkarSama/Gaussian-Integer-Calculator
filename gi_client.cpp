@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 class GaussianInteger {
 private:
     int real;
@@ -20,7 +22,7 @@ public:
 
     // Display method
     void display() const {
-        std::cout << real << " + " << imag << "i" << std::endl;
+        cout << real << " + " << imag << "i" << std::endl;
     }
 
     // Addition method
@@ -56,30 +58,30 @@ int main() {
     GaussianInteger A(3, 4);
     GaussianInteger B(5, -7);
 
-    std::cout << "A: ";
+    cout << "A: ";
     A.display();
 
-    std::cout << "B: ";
+    cout << "B: ";
     B.display();
 
     GaussianInteger sum = A.add(B);
-    std::cout << "A + B: ";
+    cout << "A + B: ";
     sum.display();
 
     GaussianInteger difference = A.subtract(B);
-    std::cout << "A - B: ";
+    cout << "A - B: ";
     difference.display();
 
     GaussianInteger product = A.multiply(B);
-    std::cout << "A * B: ";
+    cout << "A * B: ";
     product.display();
 
     GaussianInteger conjugateA = A.conjugate();
-    std::cout << "Conjugate of A: ";
+    cout << "Conjugate of A: ";
     conjugateA.display();
 
     GaussianInteger scalarProduct = A.scalarMultiply(2);
-    std::cout << "2 * A: ";
+    cout << "2 * A: ";
     scalarProduct.display();
 
     return 0;
